@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+	  <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Takuya Takeuchi</Authors>
     <Copyright>© Takuya Takeuchi 2018-2022</Copyright>
     <Company />
@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/takuya-takeuchi/FaceRecognitionDotNet</RepositoryUrl>
     <PackageTags>.net machinelearning face-recognition</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance> 
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.0\FaceRecognitionDotNet.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.1\FaceRecognitionDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,10 +30,6 @@
     <ProjectReference Include="..\DlibDotNet\src\DlibDotNet\DlibDotNet.csproj" />
   </ItemGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461'">
-    <DefineConstants>$(DefineConstants);DOTNET_FRAMEWORK;</DefineConstants>
-  </PropertyGroup>
-
   <PropertyGroup Condition="$(TargetFramework.Contains('netstandard')) Or $(TargetFramework.Contains('netcoreapp')) ">
     <DefineConstants>$(DefineConstants);DOTNETCORE</DefineConstants>
   </PropertyGroup>
@@ -43,11 +39,6 @@
     <Reference Include="System" />
   </ItemGroup>
 
-  <ItemGroup Condition="$(TargetFramework.Contains('netstandard')) Or $(TargetFramework.Contains('netcoreapp')) ">
-    <PackageReference Include="System.Drawing.Common">
-      <Version>5.0.1</Version>
-    </PackageReference>
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\LICENSE.txt">
@@ -57,7 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="5.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

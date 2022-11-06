@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using DlibDotNet;
 using DlibDotNet.Dnn;
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 
 namespace AgeTraining
 {
@@ -26,7 +26,7 @@ namespace AgeTraining
 
         private static int Main(string[] args)
         {
-            var app = new CommandLineApplication(false);
+            var app = new CommandLineApplication();
             app.Name = nameof(AgeTraining);
             app.Description = "The program for training Adience OUI Unfiltered faces for gender and age classification dataset";
             app.HelpOption("-h|--help");

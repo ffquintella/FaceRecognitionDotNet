@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using DlibDotNet;
 using MathNet.Numerics.Data.Matlab;
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 using ShellProgressBar;
 using Point = System.Drawing.Point;
 
@@ -23,7 +23,7 @@ namespace HeadPoseTraining
 
         private static int Main(string[] args)
         {
-            var app = new CommandLineApplication(false);
+            var app = new CommandLineApplication();
             app.Name = nameof(HeadPoseTraining);
             app.Description = "The program for training 300W-LP dataset";
             app.HelpOption("-h|--help");

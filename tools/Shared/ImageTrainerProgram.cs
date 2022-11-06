@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 using NLog;
 
 using DlibDotNet;
@@ -73,7 +73,7 @@ namespace Shared
 
         public int Start(string[] args)
         {
-            var app = new CommandLineApplication(false);
+            var app = new CommandLineApplication();
             app.Name = this._Name;
             app.Description = this._Description;
             app.HelpOption("-h|--help");
