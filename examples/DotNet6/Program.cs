@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using FaceRecognitionDotNet;
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 
 namespace DotNet6
 {
@@ -23,7 +23,7 @@ namespace DotNet6
 
         private static void Main(string[] args)
         {
-            var app = new CommandLineApplication(false);
+            var app = new CommandLineApplication();
             app.Name = nameof(DotNet6);
             app.HelpOption("-h|--help");
 
