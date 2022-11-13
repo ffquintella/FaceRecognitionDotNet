@@ -11,23 +11,28 @@
     <PackageTags>.net machinelearning face-recognition</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance> 
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks> 
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DocumentationFile />
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.1\FaceRecognitionDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DocumentationFile>bin\Release\netstandard2.1\FaceRecognitionDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="docs\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DlibDotNet\src\DlibDotNet\DlibDotNet.csproj" />
   </ItemGroup>
 
   <PropertyGroup Condition="$(TargetFramework.Contains('netstandard')) Or $(TargetFramework.Contains('netcoreapp')) ">
@@ -48,6 +53,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DlibDotNet.CUDA118" Version="1.0.2" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
