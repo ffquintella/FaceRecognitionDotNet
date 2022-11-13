@@ -314,3 +314,5 @@ src/DlibDotNet.Native/*.bat
 src/DlibDotNet.Native.Dnn/*.bat
 work
 .nuke/
+
+output/package/
