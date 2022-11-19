@@ -40,7 +40,8 @@ class Config
       102,
       110,
       111,
-      112
+      112,
+      118
    )
 
    $CudaVersionHash =
@@ -54,9 +55,10 @@ class Config
       110 = "CUDA_PATH_V11_0";
       111 = "CUDA_PATH_V11_1";
       112 = "CUDA_PATH_V11_2";
+      118 = "CUDA_PATH_V11_8";
    }
 
-   $VisualStudio = "Visual Studio 15 2017"
+   $VisualStudio = "Visual Studio 17 2022"
    
    static $BuildLibraryWindowsHash = 
    @{
