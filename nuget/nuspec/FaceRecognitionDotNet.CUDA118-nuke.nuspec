@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>FaceRecognitionDotNet.CUDA112</id>
+    <id>FaceRecognitionDotNet.CUDA118</id>
     <version>1.3.0.7</version>
-    <title>FaceRecognitionDotNet for CUDA 11.2</title>
+    <title>FaceRecognitionDotNet for CUDA 11.8</title>
     <authors>Takuya Takeuchi</authors>
     <owners>Takuya Takeuchi</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -28,20 +28,20 @@ This library is ported from https://github.com/ageitgey/face_recognition by C#.<
   <files>
     <file src="face128.png" target="images\" />
     
-    <file src="build\FaceRecognitionDotNet.Native.props" target="build\FaceRecognitionDotNet.CUDA118.props" />
-    <file src="build\FaceRecognitionDotNet.targets" target="build\FaceRecognitionDotNet.CUDA118.targets" />
+    <file src="..\..\nuget\nuspec\build\FaceRecognitionDotNet.Native.props" target="build\FaceRecognitionDotNet.CUDA118.props" />
+    <file src="..\..\nuget\nuspec\build\FaceRecognitionDotNet.targets" target="build\FaceRecognitionDotNet.CUDA118.targets" />
     
-    <file src="ref\**\*" target="ref" />
-    <file src="..\artifacts\cuda-118\runtimes\**\*" target="runtimes" />
+    <!--file src="ref\**\*" target="ref" /-->
+    <file src="..\..\nuget\artifacts\cuda-118\runtimes\**\*" target="runtimes" />
 
-    <file src="..\..\src\FaceRecognitionDotNet\bin\Release\netstandard2.0\FaceRecognitionDotNet.dll" target="lib\netstandard2.1" />
-    <file src="..\..\src\FaceRecognitionDotNet\bin\Release\netstandard2.0\FaceRecognitionDotNet.xml" target="lib\netstandard2.1" />
+    <file src="FaceRecognitionDotNet.dll" target="lib\netstandard2.1" />
+    <file src="FaceRecognitionDotNet.xml" target="lib\netstandard2.1" />
 
     
     <!-- Age and Gender classification -->
-    <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" />
+    <!--file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" />
     <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" />
-    <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" />
+    <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" /-->
 
     <!-- license -->
     <file src="..\..\LICENSE.txt" target="" /> 
