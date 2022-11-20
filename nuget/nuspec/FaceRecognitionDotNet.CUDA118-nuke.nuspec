@@ -39,6 +39,10 @@ This library is ported from https://github.com/ageitgey/face_recognition by C#.<
 
     
     <!-- Age and Gender classification -->
+    <file src="..\artifacts\cuda-118\runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" />
+    <file src="..\artifacts\cuda-118\runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" />
+    <file src="..\artifacts\cuda-118\runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" />
+
     <!--file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnAgeClassification.dll" />
     <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnEmotionClassification.dll" />
     <file src="..\artifacts\cuda-112\runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnnGenderClassification.dll" /-->
