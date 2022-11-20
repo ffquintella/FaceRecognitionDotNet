@@ -54,7 +54,6 @@
 
   <ItemGroup>
     <PackageReference Include="DlibDotNet.CUDA118" Version="1.0.2" />
-    <PackageReference Include="FaceRecognitionDotNet.CUDA118" Version="1.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
