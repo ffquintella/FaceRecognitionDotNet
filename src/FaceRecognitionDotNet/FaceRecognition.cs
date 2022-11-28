@@ -201,6 +201,15 @@ namespace FaceRecognitionDotNet
         }
 
         /// <summary>
+        /// Gets or sets the custom face recognizer that user defined.
+        /// </summary>
+        public IFaceRecognitionModel CustomFaceRecognitionModel
+        {
+            get;
+            set;
+        }
+        
+        /// <summary>
         /// Gets or sets the character encoding to convert <see cref="System.String"/> to array of <see cref="byte"/> for internal library.
         /// </summary>
         public static Encoding InternalEncoding
@@ -486,10 +495,15 @@ namespace FaceRecognitionDotNet
 
             var rawLandmarks = this.RawFaceLandmarks(image, knownFaceLocation, predictorModel, model);
 
+            IFaceRecognitionModel frmodel;
+
+            if (predictorModel == PredictorModel.Custom) frmodel = CustomFaceRecognitionModel;
+            else  frmodel = new FaceRecognitionModelV2(); 
+            
             var results = new List<FaceEncoding>();
             foreach (var landmark in rawLandmarks)
             {
-                var ret = new FaceEncoding(FaceRecognitionModelV1.ComputeFaceDescriptor(this._FaceEncoder, image, landmark, numJitters));
+                var ret = new FaceEncoding(frmodel.ComputeFaceDescriptor(this._FaceEncoder, image, landmark, numJitters));
                 landmark.Dispose();
                 results.Add(ret);
             }
