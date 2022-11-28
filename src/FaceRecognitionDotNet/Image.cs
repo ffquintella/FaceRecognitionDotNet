@@ -46,7 +46,7 @@ namespace FaceRecognitionDotNet
             }
         }
 
-        internal MatrixBase Matrix => this._Matrix;
+        public MatrixBase Matrix => this._Matrix;
 
         internal Mode Mode => this._Mode;
 
