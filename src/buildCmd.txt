@@ -1,0 +1,1 @@
+pwsh.exe Build.ps1 Release cuda 64 desktop 118

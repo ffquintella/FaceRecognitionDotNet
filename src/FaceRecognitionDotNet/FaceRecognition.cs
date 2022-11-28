@@ -474,8 +474,9 @@ namespace FaceRecognitionDotNet
         {
             if (image == null)
                 throw new ArgumentNullException(nameof(image));
-            if (predictorModel == PredictorModel.Custom)
-                throw new NotSupportedException("FaceRecognitionDotNet.PredictorModel.Custom is not supported.");
+            
+            //if (predictorModel == PredictorModel.Custom)
+            //    throw new NotSupportedException("FaceRecognitionDotNet.PredictorModel.Custom is not supported.");
 
             if (knownFaceLocation != null && !knownFaceLocation.Any())
                 throw new InvalidOperationException($"{nameof(knownFaceLocation)} contains no elements.");
